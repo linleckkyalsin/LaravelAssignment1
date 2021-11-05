@@ -8,5 +8,9 @@
 </head>
 <body>
 <h1>Product page</h1>
+@foreach ($products as $key=>$product)
+{{$key}} {{$product}}
+@endforeach
+
 </body>
 </html>
