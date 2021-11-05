@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\Webfrontend\AboutController;
+use App\Http\Controllers\Webfrontend\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,12 +23,6 @@ Route::get('/', function () {
 Route::get('/shop', function () {
     return view('shops.shop');
 });
-Route::get('/about', function () {
-    return view('about');
-});
-Route::get('/product', function () {
-    return view('product');
-});
-Route::get('/contact', function () {
-    return view('contact');
-});
+Route::get('/about', [AboutController::class, 'aboutPage']);
+Route::get('/product', [ProductController::class, 'productPage']);
+Route::get('/contact', [ContactController::class, 'contactPage']);
