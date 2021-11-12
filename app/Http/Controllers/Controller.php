@@ -14,4 +14,9 @@ class Controller extends BaseController
     {
         return view('contact');
     }
+    public function HomePage()
+    {
+        # code...
+        return view('website.home');
+    }
 }
