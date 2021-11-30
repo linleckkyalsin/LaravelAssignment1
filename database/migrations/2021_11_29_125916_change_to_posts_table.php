@@ -30,6 +30,9 @@ class ChangeToPostsTable extends Migration
     {
         Schema::table('posts', function (Blueprint $table) {
             //
+            $table->string('author')->change();
+            $table->renameColumn('detail', 'description');
+            $table->renameColumn('image_path', 'image');
         });
     }
 }
